@@ -1,19 +1,13 @@
-\c pokemonproject
+\c pokemonproject4
 
-INSERT INTO teams (name)
+INSERT INTO team (name)
 VALUES ('Team A');
 
-INSERT INTO teams (name)
+INSERT INTO team (name)
 VALUES ('Team B');
 
-INSERT INTO teams (name)
+INSERT INTO team (name)
 VALUES ('Team C');
 
-INSERT INTO pokemon(team_id,name, image)
-VALUES (1, 'Bulbasaur', 'image');
-
-INSERT INTO pokemon(team_id,name, image)
-VALUES (2, 'ivysaur', 'image');
-
-INSERT INTO pokemon(team_id,name, image)
-VALUES (3, 'venusaur', 'image');
+INSERT INTO team (name)
+VALUES ('Team D');

@@ -11,20 +11,20 @@
 
 <body class = "background">
   <h1 class = "Team">My Teams!</h1>
-  <form method="GET" action="/create">
+  <form method="GET" action="/team/create">
   <button class ='create-edit-delete-button'>Create New Team!</button>
   </form>
 
 
   <% allData.forEach((allData) => {%>
-    <h3 class ='toDoList'><u><%= allData.name %> </u></h3>
+    <h3 class =''><u><%= allData.name %> </u></h3>
 
 
 <form method="GET" action="/team/<%=allData.id%>/edit">
 <button class ='create-edit-delete-button'>Edit</button>
 </form>
 
-<form method="POST" action="/todo/<%=allData.id%>?_method=DELETE">
+<form method="POST" action="/team/<%=allData.id%>?_method=DELETE">
 <button class = 'create-edit-delete-button'>Delete</button>
 </form>
 <%})%>

@@ -1,17 +1,17 @@
-CREATE DATABASE pokemonproject2;
-\c pokemonproject
+CREATE DATABASE pokemonproject4;
+\c pokemonproject4
 
-DROP TABLE teams;
-DROP TABLE pokemon;
+DROP TABLE IF EXISTS team;
+DROP TABLE IF EXISTS pokemon;
 
-CREATE TABLE teams(
+CREATE TABLE team(
   id BIGSERIAL PRIMARY KEY,
   name VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE pokemon(
   id BIGSERIAL PRIMARY KEY,
-  team_id INTEGER REFERENCES team(id) NOT NULL ,
-  name VARCHAR(255) NOT NULL,
-  image VARCHAR(255) NOT NULL
+  team_id INTEGER REFERENCES team(id),
+  name VARCHAR(255),
+  image VARCHAR(255)
 );

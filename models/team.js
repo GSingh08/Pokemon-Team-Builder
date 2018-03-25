@@ -1,5 +1,5 @@
 const pgp = require("pg-promise")({});
-const connectionURL = "postgres://localhost:5432/pokemonproject";
+const connectionURL = "postgres://localhost:5432/pokemonproject4";
 // const connection = pgp(connectionURL);
 const db = pgp(connectionURL);
 
@@ -16,7 +16,7 @@ const createTeam = data => {
 };
 
 const editTeam = (id, userInput) => {
-  return db.none("UPDATE team SET name = $1 WHERE id = $3", [
+  return db.none("UPDATE team SET name = $1 WHERE id = $2", [
     userInput.name,
     id
   ]);
