@@ -1,0 +1,17 @@
+CREATE DATABASE pokemonproject2;
+\c pokemonproject
+
+DROP TABLE teams;
+DROP TABLE pokemon;
+
+CREATE TABLE teams(
+  id BIGSERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE pokemon(
+  id BIGSERIAL PRIMARY KEY,
+  team_id INTEGER REFERENCES team(id) NOT NULL ,
+  name VARCHAR(255) NOT NULL,
+  image VARCHAR(255) NOT NULL
+);

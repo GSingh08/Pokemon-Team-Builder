@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="public/style.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My Teams!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class = "background">
+  <h1 class = "Team">My Teams!</h1>
+  <form method="GET" action="/create">
+  <button class ='create-edit-delete-button'>Create New Team!</button>
+  </form>
+
+
+  <% allData.forEach((allData) => {%>
+    <h3 class ='toDoList'><u><%= allData.name %> </u></h3>
+
+
+<form method="GET" action="/team/<%=allData.id%>/edit">
+<button class ='create-edit-delete-button'>Edit</button>
+</form>
+
+<form method="POST" action="/todo/<%=allData.id%>?_method=DELETE">
+<button class = 'create-edit-delete-button'>Delete</button>
+</form>
+<%})%>
+</body>
+
+</html>

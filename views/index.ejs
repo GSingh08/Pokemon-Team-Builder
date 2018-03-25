@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="client/style.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Pokemon!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body class = "background">
+  <h1 class = "All Pokemon">All pokemon</h1>
+<h1 class = 'pokemon-container'></h1>
+
+<script type="text/javascript" src="client/main.js"></script>
+</body>
+
+</html>
+<% allData.forEach((pokemon) => {%>
+  <h3 class ='toDoList'><u><%= pokemon.name %></u></h3>
+  <a class ='toDoList' href = '/pokemon/<%=pokemon.name%>'>Click For More Info!</a>
+<%})%>
+</body>
