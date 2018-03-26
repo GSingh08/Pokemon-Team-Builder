@@ -3,7 +3,7 @@ const connectionURL = "postgres://localhost:5432/pokemonproject4";
 // const connection = pgp(connectionURL);
 const db = pgp(connectionURL);
 
-const team = () => {
+const getTeams = () => {
   return db.any("SELECT * FROM team ORDER BY id ASC");
 };
 
@@ -27,7 +27,7 @@ const deleteTeam = id => {
 };
 
 module.exports = {
-  team: team,
+  getTeams: getTeams,
   findTeamById: findTeamById,
   createTeam: createTeam,
   editTeam: editTeam,

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="client/style.css">
+  <link rel="stylesheet" type='text/css' href="client/style.css">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Pokemon!</title>
@@ -10,15 +10,21 @@
 </head>
 
 <body class = "background">
-  <h1 class = "All Pokemon">All pokemon</h1>
-<h1 class = 'pokemon-container'></h1>
+  <ul>
+  <li><a href="#">Login</a></li>
+  <li><a href="#">Register</a></li>
+  <li><a href="http://localhost:3000/team/create">Create My Own Team</a></li>
+  <li><a href="http://localhost:3000/team">Team</a></li>
+  <li><a href="http://localhost:3000/pokemon">Home</a></li>
+</ul>
 
-<script type="text/javascript" src="client/main.js"></script>
-</body>
-
-</html>
+<h1 class = "allPokemon">All pokemon</h1><br>
 <% allData.forEach((pokemon) => {%>
-  <h3 class ='toDoList'><u><%= pokemon.name %></u></h3>
-  <a class ='toDoList' href = '/pokemon/<%=pokemon.name%>'>Click For More Info!</a>
+<h3><u><%= pokemon.name %></u></h3>
+<a href = '/pokemon/<%=pokemon.name%>'>Click For More Info!</a>
 <%})%>
+
+
+
 </body>
+</html>

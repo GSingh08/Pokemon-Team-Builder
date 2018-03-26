@@ -1,4 +1,4 @@
-<form class="form-horizontal" action = '/team/<%=singleData.id%>' method = 'post'>
+<form class="form-horizontal" action = '/team/<%=teams.id%>/edit' method = 'post'>
 
     <fieldset>
 
@@ -6,8 +6,8 @@
     <legend>Edit Your New Team!</legend>
 
     <!-- Text input-->
-    <div class="form-group">
-      <label class="col-md-4 control-label" for="name">Edit Team Name!</label>
+    <div >
+      <label for="name">Edit Team Name!</label>
       <div class="div">
       <input id="name" name="name" type="text" value="<%= singleData.name%>" class="form-control input-md">
 
@@ -24,5 +24,20 @@
       </div>
     </div>
 
+    <% pokemonData.forEach((pokemon) => {%>
+      <div><img src= "<%= allData.sprites.front_default %>"></div>
+
+      <h2>name: <%= pokemon.forms[0].name %> </h2><br>
+      <h3>type: <%= pokemon.types[0].type.name%></h3>
+      <h3>  <%= pokemon.stats[0].stat.name %> : <%= pokemon.stats[0].base_stat %></h3>
+      <h3><%= pokemon.stats[1].stat.name %> : <%= pokemon.stats[1].base_stat %> </h3>
+      <h3><%= pokemon.stats[2].stat.name %> : <%= pokemon.stats[2].base_stat %> </h3>
+      <h3><%= pokemon.stats[3].stat.name %> : <%= pokemon.stats[3].base_stat %> </h3>
+      <h3><%= pokemon.stats[4].stat.name %> : <%= pokemon.stats[4].base_stat %> </h3>
+      <h3><%= pokemon.stats[5].stat.name %> : <%= pokemon.stats[5].base_stat %> </h3>
+
+    <%})%>
+</form>
+
+
     </fieldset>
-  <form>

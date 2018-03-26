@@ -2,18 +2,32 @@
 <html>
 
 <head>
+  <link rel="stylesheet" type="text/css" href="/client/style.css">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Seperate Pokemon</title>
+  <title>Pokemon</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-<body class = 'background'>
-  <h1 class = "pokemon">
-  <img src="<%= allData.sprites.front_default %>">
-    <%= allData.forms[0].name %>
+<body class="background">
+  <ul>
+  <li><a href="http://localhost:3000/pokemon">Home</a></li>
 
-  </h1>
+  <li><a href="http://localhost:3000/team">Team</a></li>
+  <li><a href="http://localhost:3000/team/create">Create My Own Team</a></li>
+  <li><a href="#">Login</a></li>
+  <li><a href="#">Register</a></li>
+  </ul>
 
+  <div><img src= "<%= allData.sprites.front_default %>"></div>
+
+  <h2>name: <%= allData.forms[0].name %> </h2><br>
+  <h3>type: <%= allData.types[0].type.name%></h3>
+  <h3>  <%= allData.stats[0].stat.name %> : <%= allData.stats[0].base_stat %></h3>
+  <h3><%= allData.stats[1].stat.name %> : <%= allData.stats[1].base_stat %> </h3>
+  <h3><%= allData.stats[2].stat.name %> : <%= allData.stats[2].base_stat %> </h3>
+  <h3><%= allData.stats[3].stat.name %> : <%= allData.stats[3].base_stat %> </h3>
+  <h3><%= allData.stats[4].stat.name %> : <%= allData.stats[4].base_stat %> </h3>
+  <h3><%= allData.stats[5].stat.name %> : <%= allData.stats[5].base_stat %> </h3>
 
 </body>
 

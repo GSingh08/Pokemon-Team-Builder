@@ -2,22 +2,30 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="public/style.css">
+    <link rel="stylesheet" type="text/css" href="client/style.css">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>My Teams!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-<body class = "background">
-  <h1 class = "Team">My Teams!</h1>
+<body class="background">
+  <ul>
+  <li><a href="http://localhost:3000/pokemon">Home</a></li>
+
+  <li><a href="http://localhost:3000/team">Team</a></li>
+  <li><a href="http://localhost:3000/team/create">Create My Own Team</a></li>
+  <li><a href="#">Login</a></li>
+  <li><a href="#">Register</a></li>
+</ul>
+  <h1 class = "team">My Teams!</h1>
   <form method="GET" action="/team/create">
   <button class ='create-edit-delete-button'>Create New Team!</button>
   </form>
 
 
   <% allData.forEach((allData) => {%>
-    <h3 class =''><u><%= allData.name %> </u></h3>
+  <h1>  <a href ='/team/<%= allData.id%>'><u><%= allData.name %> </u></a> </h1>
 
 
 <form method="GET" action="/team/<%=allData.id%>/edit">

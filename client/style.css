@@ -1,0 +1,38 @@
+.allPokemon {
+  text-align: left;
+}
+.team {
+  text-align: left;
+}
+
+.background {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: red;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: Red;
+  text-align: center;
+  padding: 16px 18px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}

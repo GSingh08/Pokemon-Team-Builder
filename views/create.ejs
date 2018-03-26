@@ -1,29 +1,38 @@
-<form class="form-horizontal" action = '/team/' method = 'post'>
 
-    <fieldset>
 
-    <!-- Form Name -->
-    <legend>Create New Team!</legend>
+<!DOCTYPE html>
+<html>
 
-    <!-- Text input-->
-    <div class="form-group">
-      <labelfor="subject">Team Name!</label>
+<head>
+  <link rel="stylesheet" type="text/css" href="/client/style.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Seperate Pokemon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class = "background">
+  <form class="form-horizontal" action = '/team' method = 'post'>
+    <ul>
+      <li><a href="http://localhost:3000/pokemon">Home</a></li>
+
+      <li><a href="http://localhost:3000/team">Team</a></li>
+      <li><a href="http://localhost:3000/team/create">Create My Own Team</a></li>
+      <li><a href="#">Login</a></li>
+      <li><a href="#">Register</a></li>
+    </ul>
+    <div>
+      <label for="name">Team Name!</label>
       <div>
-      <input id="name" name="name" type="text" value="" class="form-control input-md">
-
+        <input id="name" name="name" type="text" value="" class="form-control input-md">
       </div>
     </div>
 
-
-
-    <!-- Button -->
     <div class="div">
       <label for="submit"></label>
       <div>
         <button id="create" name="create" class="create-button">Create</button>
       </div>
     </div>
-
-    </fieldset>
-
-  <form>
+  </form>
+</body>
+</html>

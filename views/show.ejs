@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <link rel="stylesheet" type="text/css" href="/client/style.css">
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Seperate TO DO</title>
@@ -9,12 +10,18 @@
 </head>
 
 <body class = 'background'>
-  <h1 class = "toDoList">
-    <%= singleData.id %>
-  </h1>
-<h3>
-  <%= singleData.name %>
-</h3>
+  <ul>
+    <li><a href="http://localhost:3000/pokemon">Home</a></li>
+    <li><a href="http://localhost:3000/team">Team</a></li>
+    <li><a href="http://localhost:3000/team/create">Create My Own Team</a></li>
+    <li><a href="#">Login</a></li>
+    <li><a href="#">Register</a></li>
+  </ul>
+  <h3>
+    <%= singleData.name %>
+  </h3>
+
+  
 
 </body>
 
