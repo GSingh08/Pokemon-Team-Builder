@@ -1,43 +1,37 @@
-<form class="form-horizontal" action = '/team/<%=teams.id%>/edit' method = 'post'>
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="/client/style.css">
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Seperate Pokemon</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body class = "background">
+  <form class="form-horizontal" action = '/team/<%=singleData.id%>' method = 'post'>
+    <ul>
+    <li><a href="#">Login</a></li>
+    <li><a href="#">Register</a></li>
+    <li><a href="http://localhost:3000/team/create">Create My Own Team</a></li>
+    <li><a href="http://localhost:3000/team">Team</a></li>
+    <li><a href="http://localhost:3000/pokemon">Home</a></li>
+  </ul>
 
-    <fieldset>
-
-    <!-- Form Name -->
-    <legend>Edit Your New Team!</legend>
-
-    <!-- Text input-->
-    <div >
+    <div>
       <label for="name">Edit Team Name!</label>
       <div class="div">
-      <input id="name" name="name" type="text" value="<%= singleData.name%>" class="form-control input-md">
-
+        <input id="name" name="name" type="text" value="<%= singleData.name%>" class="form-control input-md">
       </div>
+
     </div>
-
-
-
-    <!-- Button -->
     <div class="div">
       <label for="edit"></label>
       <div>
         <button id="create" name="create" action = 'post' class="create-button">Edit</button>
       </div>
+
     </div>
-
-    <% pokemonData.forEach((pokemon) => {%>
-      <div><img src= "<%= allData.sprites.front_default %>"></div>
-
-      <h2>name: <%= pokemon.forms[0].name %> </h2><br>
-      <h3>type: <%= pokemon.types[0].type.name%></h3>
-      <h3>  <%= pokemon.stats[0].stat.name %> : <%= pokemon.stats[0].base_stat %></h3>
-      <h3><%= pokemon.stats[1].stat.name %> : <%= pokemon.stats[1].base_stat %> </h3>
-      <h3><%= pokemon.stats[2].stat.name %> : <%= pokemon.stats[2].base_stat %> </h3>
-      <h3><%= pokemon.stats[3].stat.name %> : <%= pokemon.stats[3].base_stat %> </h3>
-      <h3><%= pokemon.stats[4].stat.name %> : <%= pokemon.stats[4].base_stat %> </h3>
-      <h3><%= pokemon.stats[5].stat.name %> : <%= pokemon.stats[5].base_stat %> </h3>
-
-    <%})%>
+  </form>
 </form>
-
-
-    </fieldset>
+</body>
+</html>

@@ -11,17 +11,22 @@
 
 <body class = 'background'>
   <ul>
-    <li><a href="http://localhost:3000/pokemon">Home</a></li>
-    <li><a href="http://localhost:3000/team">Team</a></li>
-    <li><a href="http://localhost:3000/team/create">Create My Own Team</a></li>
-    <li><a href="#">Login</a></li>
-    <li><a href="#">Register</a></li>
-  </ul>
-  <h3>
-    <%= singleData.name %>
-  </h3>
+  <li><a href="#">Login</a></li>
+  <li><a href="#">Register</a></li>
+  <li><a href="http://localhost:3000/team/create">Create My Own Team</a></li>
+  <li><a href="http://localhost:3000/team">Team</a></li>
+  <li><a href="http://localhost:3000/pokemon">Home</a></li>
+</ul>
 
-  
+<% teamData.forEach((teamData) => {%>
+      <h1> <%= teamData.pokemon_id %> </h1>
+
+      <form method="POST" action="/team/<%= teamData.team_id%>/pokemon/<%=teamData.pokemon_id%>?_method=DELETE">
+      <button class = 'create-edit-delete-button'>Delete</button>
+      </form>
+
+
+  <%})%>
 
 </body>
 

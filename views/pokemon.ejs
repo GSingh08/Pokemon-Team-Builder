@@ -10,26 +10,37 @@
 </head>
 <body class="background">
   <ul>
-  <li><a href="http://localhost:3000/pokemon">Home</a></li>
-
-  <li><a href="http://localhost:3000/team">Team</a></li>
-  <li><a href="http://localhost:3000/team/create">Create My Own Team</a></li>
   <li><a href="#">Login</a></li>
   <li><a href="#">Register</a></li>
-  </ul>
+  <li><a href="http://localhost:3000/team/create">Create My Own Team</a></li>
+  <li><a href="http://localhost:3000/team">Team</a></li>
+  <li><a href="http://localhost:3000/pokemon">Home</a></li>
+</ul>
 
-  <div><img src= "<%= allData.sprites.front_default %>"></div>
+  <div><img src= "<%= pokemonData.sprites.front_default %>"></div>
 
-  <h2>name: <%= allData.forms[0].name %> </h2><br>
-  <h3>type: <%= allData.types[0].type.name%></h3>
-  <h3>  <%= allData.stats[0].stat.name %> : <%= allData.stats[0].base_stat %></h3>
-  <h3><%= allData.stats[1].stat.name %> : <%= allData.stats[1].base_stat %> </h3>
-  <h3><%= allData.stats[2].stat.name %> : <%= allData.stats[2].base_stat %> </h3>
-  <h3><%= allData.stats[3].stat.name %> : <%= allData.stats[3].base_stat %> </h3>
-  <h3><%= allData.stats[4].stat.name %> : <%= allData.stats[4].base_stat %> </h3>
-  <h3><%= allData.stats[5].stat.name %> : <%= allData.stats[5].base_stat %> </h3>
-
-</body>
+  <h2>name: <%= pokemonData.forms[0].name %> </h2><br>
+  <h3>type: <%= pokemonData.types[0].type.name%></h3>
+  <h3>  <%= pokemonData.stats[0].stat.name %> : <%= pokemonData.stats[0].base_stat %></h3>
+  <h3><%= pokemonData.stats[1].stat.name %> : <%= pokemonData.stats[1].base_stat %> </h3>
+  <h3><%= pokemonData.stats[2].stat.name %> : <%= pokemonData.stats[2].base_stat %> </h3>
+  <h3><%= pokemonData.stats[3].stat.name %> : <%= pokemonData.stats[3].base_stat %> </h3>
+  <h3><%= pokemonData.stats[4].stat.name %> : <%= pokemonData.stats[4].base_stat %> </h3>
+  <h3><%= pokemonData.stats[5].stat.name %> : <%= pokemonData.stats[5].base_stat %> </h3>
 
 
-</html>
+  <div>
+    <form action="/team/addPokemon" method="post">
+    <select name="team_id">
+      <% teams.forEach((team) => {%>
+        <option value="<%= team.id%>"> <%= team.name%></option>
+        <%})%>
+      </select>
+      <input type="hidden" name="pokemon_id" value="<%= pokemonData.forms[0].name %>">
+      <input  type="submit" value="Submit"/>
+    </div>
+  </form>
+  </body>
+
+
+  </html>

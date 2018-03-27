@@ -11,6 +11,6 @@ CREATE TABLE team(
 
 CREATE TABLE pokemon_teams(
   id BIGSERIAL PRIMARY KEY,
-  team_id INTEGER REFERENCES team(id),
-  pokemon_id VARCHAR(255)
+  team_id INTEGER REFERENCES team(id) ON DELETE CASCADE,
+  pokemon_id VARCHAR(255) NOT NULL
 );
