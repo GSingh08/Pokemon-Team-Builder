@@ -28,6 +28,11 @@ User Stories
 
 WireFrame
 
+This is the link to the presentation I made which includes my Wireframe.
+
+https://docs.google.com/presentation/d/1uYv2TIHvWq6TD4lA2jsDZQkCohXQNDx3uL6H9tnIXmE/edit#slide=id.g35ea16b0e0_0_100
+
+
 Project name and description
 
 -my project name "Pokemon Team Builder" and it allows you to click on a pokemon and view all of their information along with its picture. Underneath the pokemon there is a pulldown bar that you can click on and pick a team of your choice to add that specific pokemon to. You are also able to delete that pokemon if you do not want him on your team.
